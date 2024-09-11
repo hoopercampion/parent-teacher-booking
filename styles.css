@@ -1,0 +1,136 @@
+/* General page styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    padding: 20px;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+/* Header styles */
+h1, h2, h3 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 1.5em; /* Adjust header sizes */
+}
+
+/* General button styles */
+button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin-top: 10px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-sizing: border-box;
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Green-out style for other selected buttons */
+button.greyed {
+    background-color: #28a745;
+    color: white;
+}
+
+/* Select dropdown styling */
+select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: white;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjNjY2IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTAgMGgyNHYyNEgweiIgZmlsbD0ibm9uZSIvPjxwYXRoIGQ9Ik0xMiAxNWw2LTYtMS40MS0xLjQxTDExIDExLjU4IDcuNDEgNy45TCA2IDlsNiA2eiIvPjwvc3ZnPg==');
+    background-position: right 12px center;
+    background-repeat: no-repeat;
+    background-size: 12px;
+}
+
+select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Hidden class for elements */
+.hidden {
+    display: none;
+}
+
+/* Confirmation message styling */
+#confirmation {
+    background-color: #dff0d8;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    color: #3c763d;
+}
+
+/* Mobile-first approach */
+
+/* Make buttons and elements scale well on small screens */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 15px;
+        max-width: 100%;
+    }
+
+    button {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    select {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    h1, h2, h3 {
+        font-size: 1.2em;
+    }
+}
+
+/* For even smaller screens (like phones in portrait mode) */
+@media (max-width: 480px) {
+    button {
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    select {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    h1, h2, h3 {
+        font-size: 1.1em;
+    }
+}

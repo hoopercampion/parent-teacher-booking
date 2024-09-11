@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parent-Teacher Booking - Semester 2</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Parent-Teacher Evening Booking Form (Semester 2 - 2024)</h1>
+        
+        <!-- Step 1: Choose Module or Teacher -->
+        <div id="step1">
+            <h2>Select a Module or an Individual Teacher</h2>
+            <button onclick="showModuleSelection()">Select by Module</button>
+            <button onclick="showTeacherSelection()">Select by Teacher</button>
+        </div>
+
+        <!-- Module Selection -->
+        <div id="module-selection" class="hidden">
+            <h2>Select a Module</h2>
+            <select id="module" onchange="selectModule()">
+                <option value="" disabled selected>Select Module</option>
+                <option value="ALAC02">Alchemist to Activist - Science/Visual Arts (Pratik Jethwa, Matt King)</option>
+                <option value="BEST02">To be the Best - Health & PE/Science (Jonathan McDonald, Pratik Jethwa)</option>
+                <option value="DYST02">Dystopia - English (Darlene Gedye, Sheree Barker)</option>
+                <option value="EIEO02">Energy In, Energy Out - Health & PE/Technology - Food (Rob Hooper, Caryn Preston, Rob Tee)</option>
+                <option value="ENFU02">Engineering for the Future - Science/Technology (Rob Hooper, Johan Venter)</option>
+                <option value="GAIN02">Train to Gain - Health & PE (Rob Tee, Jonathan McDonald)</option>
+                <option value="GHOS02">Ghost Whisperers - The Arts - Drama/Music (Jarrod Seaton, Jol Sparks)</option>
+                <option value="GLOB02">Around the Globe - Mathematics (Ancia Roets)</option>
+                <option value="HARH02">Harmony through Haka - Health & PE/Te Ao Haka (Rick Paenga)</option>
+                <option value="HAPP02">Happily Ever After - English (Sheree Barker, Darlene Gedye)</option>
+                <option value="LIFE02">A Good Life - Mathematics (Ancia Roets)</option>
+                <option value="MAND02">Introductory Mandarin - Languages (Jarrod Seaton)</option>
+                <option value="MEMY02">Me, Myself and I - Mathematics (Jon Barry)</option>
+                <option value="OSTA02">On Stage! - Technology - Soft Materials/Drama (Jol Sparks)</option>
+                <option value="RELG02">Kia Noho Hāhi - Being Church - Religious Education (Alphonsa Antony, Ruby Tiepa)</option>
+                <option value="SBUG02">Superbugs - Science/Social Sciences (Morgan Scott, Rob Tee)</option>
+                <option value="SURV02">Survival of the Fittest - Health & PE/Social Sciences (Jonathan McDonald, Morgan Scott)</option>
+                <option value="WINL02">Winners and Losers - English (Charli Haskell, Darlene Gedye)</option>
+            </select>
+        </div>
+
+        <!-- Curriculum Area Buttons -->
+        <div id="curriculum-selection" class="hidden">
+            <h3>Select the curriculum area you would like to discuss:</h3>
+            <button id="area1-btn" class="hidden" onclick="selectCurriculumArea('area1')"></button>
+            <button id="area2-btn" class="hidden" onclick="selectCurriculumArea('area2')"></button>
+            <button id="both-btn" class="hidden" onclick="selectCurriculumArea('both')">Both Curriculum Areas</button>
+        </div>
+
+        <!-- Teacher Selection -->
+        <div id="teacher-selection" class="hidden">
+            <h2>Select a Teacher</h2>
+            <select id="teacher" onchange="selectTeacher()">
+                <option value="" disabled selected>Select Teacher</option>
+                <option value="Alphonsa Antony">Alphonsa Antony</option>
+                <option value="Ancia Roets">Ancia Roets</option>
+                <option value="Charli Haskell">Charli Haskell</option>
+                <option value="Caryn Preston">Caryn Preston</option>
+                <option value="Darlene Gedye">Darlene Gedye</option>
+                <option value="Jarrod Seaton">Jarrod Seaton</option>
+                <option value="Johan Venter">Johan Venter</option>
+                <option value="Jonathan McDonald">Jonathan McDonald</option>
+                <option value="Jol Sparks">Jol Sparks</option>
+                <option value="Jon Barry">Jon Barry</option>
+                <option value="Matt King">Matt King</option>
+                <option value="Morgan Scott">Morgan Scott</option>
+                <option value="Pratik Jethwa">Pratik Jethwa</option>
+                <option value="Rick Paenga">Rick Paenga</option>
+                <option value="Rob Hooper">Rob Hooper</option>
+                <option value="Rob Tee">Rob Tee</option>
+                <option value="Ruby Tiepa">Ruby Tiepa</option>
+                <option value="Sheree Barker">Sheree Barker</option>
+            </select>
+        </div>
+
+        <!-- Step 2: Time Slot Selection -->
+        <div id="timeslot-selection" class="hidden">
+            <h3>Select a time slot:</h3>
+            <select id="timeslot">
+                <option value="" disabled selected>Select a time slot</option>
+                <option>03:00 - 03:10</option>
+                <option>03:20 - 03:30</option>
+                <option>03:40 - 03:50</option>
+                <option>04:00 - 04:10</option>
+            </select>
+            <button onclick="confirmBooking()">Confirm Booking</button>
+        </div>
+
+        <!-- Confirmation -->
+        <div id="confirmation" class="hidden">
+            <h2>Booking Confirmed!</h2>
+            <p id="confirmation-details"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
